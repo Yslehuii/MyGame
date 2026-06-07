@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Memory database (generated)
+.memory/
+
+# Test files
+test_mcp.py
+test_mcp_client.py
+test_fts5.py
+test_search.py
+mcp_debug.log
