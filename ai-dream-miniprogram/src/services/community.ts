@@ -22,5 +22,5 @@ export function deleteComment(commentId: string) {
 }
 
 export function reportDream(dreamId: string, reason: string) {
-  return post(`/community/${dreamId}/report`, { reason })
+  return post(`/community/report`, { target_type: 'dream', target_id: dreamId, reason })
 }
