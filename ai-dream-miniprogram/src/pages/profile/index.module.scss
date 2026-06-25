@@ -1,0 +1,117 @@
+@use '@/styles/variables.scss' as *;
+
+.page {
+  min-height: 100vh;
+  background: $color-bg-page;
+  display: flex;
+  flex-direction: column;
+}
+
+.scrollArea {
+  flex: 1;
+  padding-bottom: 120rpx;
+}
+
+.form {
+  padding: $page-padding;
+}
+
+.section {
+  margin-bottom: 40rpx;
+}
+
+.label {
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+  margin-bottom: 16rpx;
+  display: block;
+}
+
+.input {
+  width: 100%;
+  height: 88rpx;
+  background: $color-bg-card;
+  border-radius: $radius-md;
+  padding: 0 24rpx;
+  font-size: $font-size-md;
+  color: $color-text-primary;
+  box-sizing: border-box;
+}
+
+.textarea {
+  width: 100%;
+  min-height: 200rpx;
+  background: $color-bg-card;
+  border-radius: $radius-md;
+  padding: 20rpx 24rpx;
+  font-size: $font-size-md;
+  color: $color-text-primary;
+  box-sizing: border-box;
+}
+
+.charCount {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+  text-align: right;
+  margin-top: 8rpx;
+  display: block;
+}
+
+.styleList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16rpx;
+}
+
+.styleItem {
+  padding: 16rpx 32rpx;
+  background: $color-bg-card;
+  border-radius: $radius-round;
+  border: 2rpx solid $color-divider;
+}
+
+.styleActive {
+  background: rgba($color-primary, 0.1);
+  border-color: $color-primary;
+}
+
+.styleText {
+  font-size: $font-size-md;
+  color: $color-text-secondary;
+}
+
+.styleActive .styleText {
+  color: $color-primary;
+  font-weight: $font-weight-semibold;
+}
+
+.bottomBar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: $color-bg-card;
+  padding: 20rpx 32rpx;
+  padding-bottom: calc(20rpx + env(safe-area-inset-bottom));
+  box-shadow: 0 -2rpx 10rpx rgba(0, 0, 0, 0.05);
+}
+
+.saveBtn {
+  width: 100%;
+  height: 88rpx;
+  line-height: 88rpx;
+  background: $color-primary;
+  border-radius: $radius-button;
+  @include flex-center;
+}
+
+.disabled {
+  opacity: 0.6;
+}
+
+.saveText {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: #fff;
+}

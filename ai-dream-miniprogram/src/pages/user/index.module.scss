@@ -1,0 +1,202 @@
+@use '@/styles/variables.scss' as *;
+
+.page {
+  min-height: 100vh;
+  background: $color-bg-page;
+}
+
+.scrollContent {
+  height: 100vh;
+}
+
+.loadingWrap {
+  min-height: 100vh;
+  @include flex-center;
+}
+
+.loadingText {
+  font-size: $font-size-md;
+  color: $color-text-tertiary;
+}
+
+.header {
+  background: $color-primary-gradient;
+  padding: 64rpx 32rpx 48rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatarWrap {
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: $radius-round;
+  border: 4rpx solid rgba(255, 255, 255, 0.5);
+  overflow: hidden;
+  margin-bottom: 20rpx;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+}
+
+.nickname {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-semibold;
+  color: $color-text-white;
+  margin-bottom: 8rpx;
+}
+
+.bio {
+  font-size: $font-size-sm;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 32rpx;
+}
+
+.followBtn {
+  background: $color-text-white;
+  border-radius: $radius-button;
+  padding: 16rpx 64rpx;
+  margin-bottom: 32rpx;
+  transition: all $transition-fast;
+
+  &:active {
+    transform: scale(0.96);
+  }
+}
+
+.following {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.followText {
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+  color: $color-primary;
+}
+
+.following .followText {
+  color: $color-text-white;
+}
+
+.editBtn {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: $radius-button;
+  padding: 16rpx 48rpx;
+  margin-bottom: 32rpx;
+}
+
+.editText {
+  font-size: $font-size-md;
+  color: $color-text-white;
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: $radius-lg;
+  padding: 24rpx 48rpx;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.statNum {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+  color: $color-text-white;
+}
+
+.statLabel {
+  font-size: $font-size-xs;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 4rpx;
+}
+
+.statDivider {
+  width: 1rpx;
+  height: 40rpx;
+  background: rgba(255, 255, 255, 0.3);
+  margin: 0 16rpx;
+}
+
+.sectionTitle {
+  padding: $spacing-lg $page-padding $spacing-sm;
+}
+
+.sectionText {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+}
+
+.dreamList {
+  padding: 0 $page-padding $spacing-xl;
+}
+
+.dreamItem {
+  display: flex;
+  background: $color-bg-card;
+  border-radius: $radius-md;
+  padding: 20rpx;
+  margin-bottom: $spacing-sm;
+  box-shadow: $shadow-card;
+}
+
+.dreamImage {
+  width: 160rpx;
+  height: 120rpx;
+  border-radius: $radius-sm;
+  flex-shrink: 0;
+}
+
+.dreamInfo {
+  flex: 1;
+  margin-left: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dreamTitle {
+  font-size: $font-size-md;
+  font-weight: $font-weight-medium;
+  color: $color-text-primary;
+  @include text-ellipsis;
+  margin-bottom: 8rpx;
+}
+
+.dreamContent {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+  @include text-ellipsis-multi(2);
+  margin-bottom: 8rpx;
+}
+
+.dreamMeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dreamTime {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+}
+
+.dreamStats {
+  display: flex;
+  align-items: center;
+  gap: 16rpx;
+}
+
+.dreamStat {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+}

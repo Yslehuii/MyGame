@@ -1,0 +1,181 @@
+@use '@/styles/variables.scss' as *;
+
+.page {
+  min-height: 100vh;
+  background: $color-bg-page;
+  display: flex;
+  flex-direction: column;
+}
+
+.scrollArea {
+  flex: 1;
+}
+
+.form {
+  padding: 32rpx $page-padding;
+}
+
+.section {
+  margin-bottom: 40rpx;
+}
+
+.label {
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+  display: block;
+  margin-bottom: 16rpx;
+}
+
+.input {
+  width: 100%;
+  height: 88rpx;
+  background: $color-bg-card;
+  border: 1rpx solid $color-border;
+  border-radius: $radius-md;
+  padding: 0 24rpx;
+  font-size: $font-size-md;
+  color: $color-text-primary;
+  box-sizing: border-box;
+}
+
+.textarea {
+  width: 100%;
+  height: 300rpx;
+  background: $color-bg-card;
+  border: 1rpx solid $color-border;
+  border-radius: $radius-md;
+  padding: 24rpx;
+  font-size: $font-size-md;
+  color: $color-text-primary;
+  box-sizing: border-box;
+}
+
+.charCount {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+  text-align: right;
+  display: block;
+  margin-top: 8rpx;
+}
+
+.moodList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16rpx;
+}
+
+.moodItem {
+  background: $color-bg-card;
+  border: 1rpx solid $color-border;
+  border-radius: 40rpx;
+  padding: 12rpx 28rpx;
+  transition: all $transition-fast;
+}
+
+.moodActive {
+  background: rgba($color-primary, 0.1);
+  border-color: $color-primary;
+}
+
+.moodText {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+}
+
+.moodActive .moodText {
+  color: $color-primary;
+  font-weight: $font-weight-medium;
+}
+
+.switchRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: $color-bg-card;
+  border: 1rpx solid $color-border;
+  border-radius: $radius-md;
+  padding: 24rpx;
+}
+
+.switchInfo {
+  flex: 1;
+  margin-right: 24rpx;
+}
+
+.switchLabel {
+  font-size: $font-size-md;
+  font-weight: $font-weight-medium;
+  color: $color-text-primary;
+  display: block;
+  margin-bottom: 6rpx;
+}
+
+.switchDesc {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+  display: block;
+}
+
+.switch {
+  width: 96rpx;
+  height: 52rpx;
+  border-radius: 26rpx;
+  background: $color-border;
+  position: relative;
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+
+.switchOn {
+  background: $color-primary;
+}
+
+.switchThumb {
+  width: 44rpx;
+  height: 44rpx;
+  border-radius: $radius-round;
+  background: #fff;
+  position: absolute;
+  top: 4rpx;
+  left: 4rpx;
+  transition: transform 0.2s;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.15);
+}
+
+.switchThumbOn {
+  transform: translateX(44rpx);
+}
+
+.bottomBar {
+  padding: 16rpx $page-padding;
+  padding-bottom: calc(16rpx + env(safe-area-inset-bottom));
+  background: $color-bg-card;
+  border-top: 1rpx solid $color-divider;
+}
+
+.submitBtn {
+  width: 100%;
+  height: $button-height-lg;
+  border-radius: $radius-button;
+  background: $color-primary-gradient;
+  @include flex-center;
+  transition: all $transition-fast;
+
+  &:active {
+    opacity: 0.9;
+    transform: scale(0.98);
+  }
+}
+
+.disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.submitText {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text-white;
+  white-space: nowrap;
+}

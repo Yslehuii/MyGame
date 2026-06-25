@@ -1,0 +1,235 @@
+@use '@/styles/variables.scss' as *;
+
+.page {
+  min-height: 100vh;
+  background: $color-bg-page;
+  padding-bottom: 200rpx;
+}
+
+.contentArea {
+  padding-bottom: 32rpx;
+}
+
+.header {
+  background: $color-bg-card;
+  padding: 32rpx;
+}
+
+.authorRow {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24rpx;
+}
+
+.avatar {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: $radius-round;
+  flex-shrink: 0;
+}
+
+.authorInfo {
+  flex: 1;
+  margin-left: 20rpx;
+}
+
+.nickname {
+  font-size: $font-size-md;
+  font-weight: $font-weight-medium;
+  color: $color-text-primary;
+  display: block;
+}
+
+.time {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+  display: block;
+  margin-top: 4rpx;
+}
+
+.moodTag {
+  background: rgba($color-primary, 0.1);
+  border-radius: $radius-xs;
+  padding: 6rpx 16rpx;
+}
+
+.moodText {
+  font-size: $font-size-xs;
+  color: $color-primary;
+  white-space: nowrap;
+}
+
+.title {
+  font-size: $font-size-xxl;
+  font-weight: $font-weight-bold;
+  color: $color-text-primary;
+  display: block;
+  margin-bottom: 16rpx;
+  line-height: $line-height-tight;
+}
+
+.content {
+  font-size: $font-size-md;
+  color: $color-text-secondary;
+  display: block;
+  line-height: $line-height-loose;
+}
+
+.dreamImage {
+  width: 100%;
+  height: 500rpx;
+  display: block;
+}
+
+.analysisCard {
+  margin: $spacing-md $page-padding;
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  padding: 32rpx;
+  box-shadow: $shadow-card;
+  border-left: 6rpx solid $color-primary;
+}
+
+.analysisHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.analysisIcon {
+  font-size: 32rpx;
+  margin-right: 12rpx;
+}
+
+.analysisTitle {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-primary;
+}
+
+.analysisContent {
+  font-size: $font-size-md;
+  color: $color-text-secondary;
+  line-height: $line-height-loose;
+}
+
+.commentSection {
+  background: $color-bg-card;
+  margin: $spacing-md $page-padding;
+  border-radius: $radius-lg;
+  padding: 32rpx;
+  box-shadow: $shadow-card;
+}
+
+.sectionTitle {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+  display: block;
+  margin-bottom: 16rpx;
+}
+
+.bottomBar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: $color-bg-card;
+  border-top: 1rpx solid $color-divider;
+  padding-bottom: env(safe-area-inset-bottom);
+  z-index: 100;
+}
+
+.commentInput {
+  display: flex;
+  align-items: center;
+  padding: 16rpx 32rpx;
+  gap: 16rpx;
+}
+
+.input {
+  flex: 1;
+  height: 72rpx;
+  background: $color-bg-input;
+  border-radius: 36rpx;
+  padding: 0 24rpx;
+  font-size: $font-size-sm;
+  color: $color-text-primary;
+}
+
+.sendBtn {
+  height: 72rpx;
+  padding: 0 28rpx;
+  border-radius: 36rpx;
+  background: $color-primary;
+  @include flex-center;
+  flex-shrink: 0;
+}
+
+.sendText {
+  font-size: $font-size-sm;
+  color: $color-text-white;
+  white-space: nowrap;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 12rpx 32rpx;
+}
+
+.actionBtn {
+  display: flex;
+  align-items: center;
+  padding: 12rpx 24rpx;
+}
+
+.actionIcon {
+  font-size: 32rpx;
+  color: $color-text-tertiary;
+  margin-right: 8rpx;
+}
+
+.liked {
+  color: $color-error;
+}
+
+.actionCount {
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+}
+
+.actionLabel {
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+}
+
+.sharedIcon {
+  color: $color-primary;
+}
+
+.shareBtn {
+  background: none;
+  border: none;
+  padding: 12rpx 24rpx;
+  margin: 0;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+
+  &::after {
+    border: none;
+  }
+}
+
+.shareIcon {
+  font-size: 32rpx;
+  color: $color-text-tertiary;
+  margin-right: 8rpx;
+}
+
+.shareLabel {
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+}
